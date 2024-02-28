@@ -2,11 +2,6 @@ import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.Date
 
-dependencies {
-    def appCenterSdkVersion = '4.4.5'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-}
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -223,6 +218,9 @@ android {
 }
 
 dependencies {
+    def appCenterSdkVersion = '4.4.5'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(":viewpagerdotsindicator"))
     implementation(project(":dhis_android_analytics"))
